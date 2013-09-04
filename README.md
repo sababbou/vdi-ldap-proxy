@@ -6,6 +6,7 @@ This script works as a "Proxy" which remove whitespace after the comma in ldap s
 Client Application ---> vdi-ldap-proxy ---> LDAP Server
 
 Installation procedure
+======================
 1) Install a fresh new (Debian) server
 2) Install python and ldaptor library
   apt-get install python python-ldaptor
@@ -20,6 +21,7 @@ nice_basedn = 'dc=test,dc=dom'        # BaseDN without the whitespace
 6) Use the proxy IP/DNS on the client application.
 
 Thanks to :
+===========
 - Ricardo Pascal for his python proxy in less than 100 lines :
   http://voorloopnul.com/blog/a-python-proxy-in-less-than-100-lines-of-code/
 
