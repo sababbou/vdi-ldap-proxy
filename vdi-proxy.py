@@ -96,7 +96,7 @@ class TheServer:
                     inherit=pureldap.LDAPBERDecoderContext(fallback=pureber.BERDecoderContext())))
                 o, bytes = pureber.berDecodeObject(berdecoder, data)
                 print strftime("%Y-%m-%d %H:%M:%S : ", gmtime()) + " LDAP request -> has filthy baseDn : " + o.value.baseObject
-                o.value.baseObject = nice_basedn
+                o.value.baseObject = str(o.value.baseObject).replace(", ",",")
                 print "  -> converted baseDn : " + o.value.baseObject + " -> relaying to " + str(forward_to)
                 data = str(o)
 
