@@ -11,7 +11,6 @@ buffer_size = 4096
 delay = 0.0001
 forward_to = ('samba4.test.dom', 389) # Target LDAP server
 filthy_basedn = 'dc=test, dc=dom'     # BaseDN with the whitespace
-nice_basedn = 'dc=test,dc=dom'        # BaseDN without the whitespace
 
 class Forward:
     def __init__(self):
